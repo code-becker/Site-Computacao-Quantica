@@ -1,0 +1,131 @@
+/* Estilo Geral */
+body {
+    margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, rgba(0, 100, 0, 0.2), rgba(0, 0, 0, 0.6)), 
+              url("IMG/fundo2.webp");
+  background: linear-gradient(to bottom right, #3d671a, #4b481a);
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: white; /* Texto branco para contraste */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  
+  background-size: cover;
+  color: white; /* Texto branco para contraste */
+}
+
+/* Ícone de Voltar (sem ser um botão tradicional) */
+.voltar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #f5f5f5;
+  background: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.seta {
+  font-size: 35px;
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+/* Efeito de animação para a seta */
+.voltar:hover .seta {
+  color: #b8f7d4;
+  transform: rotate(-90deg);  /* Girando a seta ao passar o mouse */
+}
+
+/* Cabeçalho */
+.header {
+  background: rgba(0, 0, 0, 0.3); /* Fundo escuro translúcido */
+  color: white; /* Texto branco */
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 6px solid rgba(255, 255, 255, 0.1); /* Linha sutil */
+}
+
+.header .logo {
+  width: 160px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+  color: #e0e8d0; /* Cinza claro */
+}
+
+/* Conteúdo principal */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.link-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.link-item {
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1); /* Fundo translúcido */
+  border-radius: 8px;
+  padding: 1rem;
+  padding-left: 100px;
+  padding-right: 100px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.link-item:hover {
+  transform: scale(1.05);
+  background: rgba(177, 230, 177, 0.4); /* Verde claro no hover */
+}
+
+.link-image {
+  width: 60px;
+  height: 60px;
+  margin-right: 2rem;
+  
+  
+}
+
+.link-item a {
+  text-decoration: none;
+  color: white; /* Texto branco */
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.link-item a:hover {
+  color: #e0e8d0; /* Cinza claro */
+}
+
+/* Rodapé */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3); /* Fundo escuro translúcido */
+  color: #e0e8d0; /* Cinza claro */
+}
+
+

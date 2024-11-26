@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - Internet Quântica</title>
+    <link rel="stylesheet" href="style3.css" />
+    <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon">
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector(".contact-form");
+        form.addEventListener("submit", (event) => {
+          event.preventDefault(); // Impede o envio padrão do formulário
+          
+          // Exibe mensagem de sucesso
+          const successMessage = document.createElement("p");
+          successMessage.textContent = "Sua mensagem foi enviada com sucesso!";
+          successMessage.classList.add("success-message");
+          form.parentElement.insertBefore(successMessage, form);
+
+          // Limpa os campos do formulário
+          form.reset();
+
+          // Remove a mensagem após alguns segundos
+          setTimeout(() => {
+            successMessage.remove();
+          }, 3000);
+        });
+      });
+    </script>
+    <style>
+      /* Estilo para a mensagem de sucesso */
+      .success-message {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #165224;
+        color: #d7dfd9;
+        border: 1px solid #c3e6cb;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 1.3rem;
+      }
+    </style>
+
+  </head>
+  <body>
+    <main>
+      <div class="contact-wrapper">
+        <header class="contact-header">
+          <h1>Entre em Contato</h1>
+          <p>
+            Adoraríamos ouvir de você! Preencha o formulário abaixo e faremos
+            nosso melhor para responder rapidamente.
+          </p>
+        </header>
+
+        <form class="contact-form" action="enviar.php" method="post">
+          <label for="nome">Nome</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome"
+            required
+          />
+
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+
+          <label for="empresa">Empresa/Organização</label>
+          <input
+            type="text"
+            id="empresa"
+            name="empresa"
+            placeholder="Nome da organização (opcional)"
+          />
+
+          <label class="mensagem" for="mensagem">Mensagem</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="5"
+            placeholder="Escreva sua mensagem aqui"
+            required
+          ></textarea>
+
+          <button type="submit">ㅤ  Enviar</button>
+        </form>
+
+        <div class="back-home">
+          <a href="Inicio.html">Voltar para a Página Inicial</a>
+        </div>
+      </div>
+    </main>
+    <footer>&copy; 2024 Internet Quântica - Projeto Acadêmico</footer>
+  </body>
+</html>

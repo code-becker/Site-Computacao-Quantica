@@ -1,0 +1,149 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    color: #ffffff; /* Branco puro para o texto */
+    background: linear-gradient(to bottom right, #2e4a17, #3c3b18); /* Fundo mais escuro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Paleta de cores */
+:root {
+    --cor-primaria: rgba(50, 100, 50, 0.8); /* Verde mais escuro e sutil */
+    --cor-secundaria: #d4d8d4; /* Cinza claro para elementos secundários */
+    --cor-hover: rgba(120, 200, 120, 0.8); /* Verde mais destacado ao passar o mouse */
+    --cor-fundo-transparente: rgba(255, 255, 255, 0.15); /* Fundo translúcido mais escuro */
+    --cor-destaque: #ffffff; /* Branco puro para elementos destacados */
+}
+
+/* Wrapper do conteúdo */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.contact-wrapper {
+    width: 95%;
+    max-width: 900px;
+    background: var(--cor-fundo-transparente);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra mais escura */
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+/* Cabeçalho */
+.contact-header h1 {
+    font-size: 2.5rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 10px;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.5); /* Suavizado */
+}
+
+.contact-header p {
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 30px;
+}
+
+/* Formulário */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 40px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    color: var(--cor-destaque);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 96%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Fundo mais translúcido */
+    color: var(--cor-destaque);
+    transition: all 0.3s ease;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--cor-hover);
+    outline: none;
+    box-shadow: 0 0 10px rgba(120, 200, 120, 0.5);
+}
+
+.contact-form button {
+    padding: 15px;
+    font-size: 1rem;
+    background: var(--cor-primaria);
+    color: var(--cor-destaque);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background: var(--cor-hover);
+    transform: translateY(-2px);
+}
+
+/* Botão de voltar */
+.back-home {
+    margin-top: 20px;
+}
+
+.back-home a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.back-home a:hover {
+    color: var(--cor-hover);
+    text-decoration: underline;
+}
+
+
+/* Rodapé */
+footer {
+    background: var(--cor-fundo-transparente);
+    color: var(--cor-secundaria);
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Sombra mais sutil */
+    backdrop-filter: blur(5px);
+}
+/* Placeholder */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Branco translúcido */
+    font-style: italic; /* Opcional: estilo para destacar */
+    transition: color 0.3s ease; /* Animação ao alterar a cor */
+}
+
+.contact-form input:focus::placeholder,
+.contact-form textarea:focus::placeholder {
+    color: rgba(200, 255, 200, 0.8); /* Verde claro ao focar */
+}
